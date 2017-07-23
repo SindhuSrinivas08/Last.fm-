@@ -9,6 +9,7 @@ public class Artist {
 	private String listeners;
 	private String mbid;
 	private String url;
+	private String imagePath;
 	
 	@XmlElement(name="name")
 	public String getName() {
@@ -38,12 +39,20 @@ public class Artist {
 	public void setUrl(String url) {
 		this.url = url;
 	}
-	public Artist(String name, String listeners, String mbid, String url) {
+	
+	public String getImagePath() {
+		return imagePath;
+	}
+	public void setImagePath(String imagePath) {
+		this.imagePath = imagePath;
+	}
+	public Artist(String name, String listeners, String mbid, String url,String imagePath) {
 		super();
 		this.name = name;
 		this.listeners = listeners;
 		this.mbid = mbid;
 		this.url = url;
+		this.imagePath = imagePath;
 	}
 	public Artist() {
 		super();
